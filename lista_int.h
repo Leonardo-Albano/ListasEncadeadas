@@ -10,3 +10,5 @@ void lst_liberar(LISTA_INT * lista);
 LISTA_INT * lst_buscar(LISTA_INT * lista, int info);
 LISTA_INT * lst_inserir_final(LISTA_INT * lista, int info);
 LISTA_INT * lst_remover(LISTA_INT * lista, int info);
+int lst_cont(LISTA_INT * lista);
+LISTA_INT * lst_copiar(LISTA_INT * lista, LISTA_INT * listaCopia);

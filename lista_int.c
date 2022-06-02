@@ -83,3 +83,33 @@ LISTA_INT * lst_remover(LISTA_INT * lista, int info) {
     free(nodo);
     return lista;
 }
+
+int lst_cont(LISTA_INT * lista){
+    LISTA_INT * nodo = lista;
+    int cont=0;
+
+    while (nodo != NULL) {
+        cont++;
+        nodo = nodo->ptr_proximo;
+    }
+    
+    return cont;
+}
+
+LISTA_INT * lst_copiar(LISTA_INT * lista, LISTA_INT * listaCopia){
+
+    LISTA_INT * nodo = lista;
+    LISTA_INT * nodoCopy = listaCopia;
+
+    while (nodo!=NULL){
+        nodoCopy = lst_inserir_final(nodoCopy, nodo->info);
+        nodo = nodo->ptr_proximo;
+    }
+    
+    return nodoCopy;
+}
+
+
+
+
+

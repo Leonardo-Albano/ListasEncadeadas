@@ -5,13 +5,17 @@
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
-      "args": [],
+      "args": [
+        ""
+      ],
       "stopAtEntry": false,
-      "externalConsole": false,
-      "cwd": "f:/Downloads/lista_int",
-      "program": "f:/Downloads/lista_int/build/Debug/outDebug",
+      "cwd": "c:/Users/Aluno/Documents/lista_int",
+      "environment": [],
+      "program": "c:/Users/Aluno/Documents/lista_int/build/Debug/outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
+      "externalConsole": false,
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
