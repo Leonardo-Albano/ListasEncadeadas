@@ -12,3 +12,5 @@ LISTA_INT * lst_inserir_final(LISTA_INT * lista, int info);
 LISTA_INT * lst_remover(LISTA_INT * lista, int info);
 int lst_cont(LISTA_INT * lista);
 LISTA_INT * lst_copiar(LISTA_INT * lista, LISTA_INT * listaCopia);
+void lst_concatena(LISTA_INT * lista, LISTA_INT * lista2);
+LISTA_INT * lst_vetor(int *vet, int n);

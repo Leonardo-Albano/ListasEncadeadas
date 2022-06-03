@@ -101,6 +101,11 @@ LISTA_INT * lst_copiar(LISTA_INT * lista, LISTA_INT * listaCopia){
     LISTA_INT * nodo = lista;
     LISTA_INT * nodoCopy = listaCopia;
 
+    if (nodo==NULL){
+        printf("\nNodo eh NULL, nao pode ser copiado\n");
+        return nodo;
+    }
+
     while (nodo!=NULL){
         nodoCopy = lst_inserir_final(nodoCopy, nodo->info);
         nodo = nodo->ptr_proximo;
@@ -109,6 +114,27 @@ LISTA_INT * lst_copiar(LISTA_INT * lista, LISTA_INT * listaCopia){
     return nodoCopy;
 }
 
+void lst_concatena(LISTA_INT * lista, LISTA_INT * lista2){
+    LISTA_INT * nodo = lista;
+    LISTA_INT * nodo2 = lista2;
+    
+    while (nodo2->ptr_proximo!=NULL){
+        nodo2=nodo2->ptr_proximo;
+    }
+
+    nodo2->ptr_proximo=nodo;
+}
+
+LISTA_INT * lst_vetor(int *vet, int n){
+    LISTA_INT * listaVetor = lst_criar();
+
+    for (int i = 0; i < n; i++){
+        listaVetor = lst_inserir_final(listaVetor, vet[i]);
+    }
+    
+    return listaVetor;
+
+}
 
 
 
