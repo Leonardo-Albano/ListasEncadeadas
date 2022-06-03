@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "c:/Users/Aluno/Documents/Project/ListasEncadeadas",
-      "program": "c:/Users/Aluno/Documents/Project/ListasEncadeadas/build/Debug/outDebug",
+      "cwd": "c:/WorkspaceC/ListasEncadeadas",
+      "program": "c:/WorkspaceC/ListasEncadeadas/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
       "setupCommands": [

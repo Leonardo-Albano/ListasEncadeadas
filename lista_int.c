@@ -136,6 +136,63 @@ LISTA_INT * lst_vetor(int *vet, int n){
 
 }
 
+LISTA_INT * lst_resultante(LISTA_INT * lista, int n){
+    LISTA_INT * nodo = lista;
+    LISTA_INT * nodo_ant = NULL;
 
+    for (int i = 0; i < n; i++){
+        nodo_ant = nodo;
+        nodo = nodo->ptr_proximo;
+        nodo_ant->ptr_proximo = nodo->ptr_proximo;
+        free(nodo_ant);
+    }
+    
+    return nodo;
+}
 
+LISTA_INT * lst_divide(LISTA_INT * lista, int n){
+    LISTA_INT * nodo = lista;
+    LISTA_INT * nodo2 = NULL;
+    
+    while (nodo->info != n){
+        nodo = nodo->ptr_proximo;
+    }
+    
+    nodo2=nodo->ptr_proximo;
+    nodo->ptr_proximo = NULL;
 
+    return nodo2;
+
+}
+
+LISTA_INT * lst_inverte(LISTA_INT * lista){         //FAZER
+    LISTA_INT * nodo = lista;
+
+    return 0;
+}
+
+LISTA_INT * lst_organiza(LISTA_INT * lista){
+  LISTA_INT * nodo2 = lst_criar();
+  LISTA_INT * nodo;
+
+  int i, n;
+
+  while(lista!=NULL){
+    nodo = lista;
+    n=nodo->info;
+
+    while(nodo!=NULL){
+      nodo=nodo->ptr_proximo;
+
+      if(nodo!=NULL && n>nodo->info){
+        n=nodo->info;
+      }
+
+    }
+
+    lista = lst_remover(lista, n);
+    nodo2 = lst_inserir_final(nodo2, n);
+  }
+
+  return nodo2;
+}
