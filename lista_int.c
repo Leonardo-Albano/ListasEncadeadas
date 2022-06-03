@@ -165,17 +165,17 @@ LISTA_INT * lst_divide(LISTA_INT * lista, int n){
 
 }
 
-LISTA_INT * lst_inverte(LISTA_INT * lista){         //FAZER
-    LISTA_INT * nodo = lista;
+// LISTA_INT * lst_inverte(LISTA_INT * lista){         //FAZER
+//     LISTA_INT * nodo = lista;
 
-    return 0;
-}
+//     return 0;
+// }
 
 LISTA_INT * lst_organiza(LISTA_INT * lista){
   LISTA_INT * nodo2 = lst_criar();
   LISTA_INT * nodo;
 
-  int i, n;
+  int n;
 
   while(lista!=NULL){
     nodo = lista;

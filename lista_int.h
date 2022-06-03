@@ -16,5 +16,5 @@ void lst_concatena(LISTA_INT * lista, LISTA_INT * lista2);
 LISTA_INT * lst_vetor(int *vet, int n);
 LISTA_INT * lst_resultante(LISTA_INT * lista, int n);
 LISTA_INT * lst_divide(LISTA_INT * lista, int n);
-LISTA_INT * lst_inverte(LISTA_INT * lista);
+// LISTA_INT * lst_inverte(LISTA_INT * lista);
 LISTA_INT * lst_organiza(LISTA_INT * lista);
