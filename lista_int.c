@@ -152,47 +152,44 @@ LISTA_INT * lst_resultante(LISTA_INT * lista, int n){
 
 LISTA_INT * lst_divide(LISTA_INT * lista, int n){
     LISTA_INT * nodo = lista;
-    LISTA_INT * nodo2 = NULL;
+    LISTA_INT * nodo2 = lst_criar();
+    
     
     while (nodo->info != n){
         nodo = nodo->ptr_proximo;
     }
-    
+
     nodo2=nodo->ptr_proximo;
     nodo->ptr_proximo = NULL;
 
     return nodo2;
-
 }
 
 // LISTA_INT * lst_inverte(LISTA_INT * lista){         //FAZER
 //     LISTA_INT * nodo = lista;
-
+//
 //     return 0;
 // }
 
 LISTA_INT * lst_organiza(LISTA_INT * lista){
-  LISTA_INT * nodo2 = lst_criar();
-  LISTA_INT * nodo;
+    LISTA_INT * nodo = lista;
+    LISTA_INT * nodo2 = lst_criar();
 
-  int n;
+    do{
+        int n=0;
+        
+        while (nodo!=NULL){
+            if(nodo->info >= n){
+                n = nodo->info;
+            }
+            nodo=nodo->ptr_proximo;
+        }
 
-  while(lista!=NULL){
-    nodo = lista;
-    n=nodo->info;
+        nodo2 = lst_inserir_final(nodo2, n);
+        lista = lst_remover(lista, n);
 
-    while(nodo!=NULL){
-      nodo=nodo->ptr_proximo;
-
-      if(nodo!=NULL && n>nodo->info){
-        n=nodo->info;
-      }
-
-    }
-
-    lista = lst_remover(lista, n);
-    nodo2 = lst_inserir_final(nodo2, n);
-  }
-
-  return nodo2;
+        nodo = lista;
+    } while (nodo!=NULL);
+    
+    return nodo2;
 }

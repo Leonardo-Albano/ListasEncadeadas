@@ -70,8 +70,8 @@ int main(/*int nargs, char ** args*/) {
     printf("\nInsira o numero(positivo) a ser retirado: ");
     scanf("%d", &n_resultante);
 
-    lista = lst_resultante(listaResultante, n_resultante);
-    lst_imprimir(lista);
+    listaResultante = lst_resultante(listaResultante, n_resultante);
+    lst_imprimir(listaResultante);
 
 /*--------------------------------------------------------------*/
 
@@ -84,15 +84,15 @@ int main(/*int nargs, char ** args*/) {
         listaDivide = lst_inserir_final(listaDivide, i);
     }
 
+    lst_imprimir(listaDivide);
     listaDivide = lst_divide(listaDivide, n_divide);
-    lst_imprimir(lista);
-    printf("\n");
+    printf("\nlista dividida:\n");
     lst_imprimir(listaDivide);
 
 /*--------------------------------------------------------------*/
 
     // printf("\n***INVERTE***\n");
-
+    // Nao consegui fazer >:(
 
 
 /*--------------------------------------------------------------*/
@@ -102,18 +102,25 @@ int main(/*int nargs, char ** args*/) {
     LISTA_INT * listaOrganiza = lst_criar();
 
     for (int i = 0; i < 10; i++){
-        lst_inserir_final (listaOrganiza, rand() % 9 + 1);
+        listaOrganiza = lst_inserir_final(listaOrganiza, rand() % 9 + 1);
     }
     
     lst_imprimir(listaOrganiza);
-    printf("Lista Organizada:\n");
 
-    listaOrganiza = lst_organiza(lista);
+    printf("\n^^^ Lista Desorganizada\nvvv Lista Organizada");
 
+    listaOrganiza = lst_organiza(listaOrganiza);
     lst_imprimir(listaOrganiza);
 
 /*--------------------------------------------------------------*/
     
     lst_liberar(lista);
+    lst_liberar(listaConcatena);
+    lst_liberar(listaCopia);
+    lst_liberar(listaDivide);
+    lst_liberar(listaOrganiza);
+    lst_liberar(listaResultante);
+    lst_liberar(listaVetor);
+
     return EXIT_SUCCESS;
 }

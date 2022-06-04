@@ -5,13 +5,17 @@
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
-      "args": [],
+      "args": [
+        ""
+      ],
       "stopAtEntry": false,
-      "externalConsole": false,
-      "cwd": "f:/Projects_VSC/C/ListasEncadeadas",
-      "program": "f:/Projects_VSC/C/ListasEncadeadas/build/Debug/outDebug",
+      "cwd": "c:/Users/Aluno/Documents/C/ListasEncadeadas",
+      "environment": [],
+      "program": "c:/Users/Aluno/Documents/C/ListasEncadeadas/build/Debug/outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
+      "externalConsole": false,
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
